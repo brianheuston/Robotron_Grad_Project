@@ -1,0 +1,47 @@
+# Project: Robotron
+# Makefile created by Dev-C++ 4.9.8.0
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = Robotron_private.res
+OBJ  = Bitmap.o GameEngine.o Sprite.o Background.o Robotron.o MiscSprite.o $(RES)
+LINKOBJ  = Bitmap.o GameEngine.o Sprite.o Background.o Robotron.o MiscSprite.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -mwindows ../../../../Dev-Cpp/lib/libmsimg32.a ../../../../Dev-Cpp/lib/libwinmm.a 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/include/c++"  -I"C:/Dev-Cpp/include/c++/mingw32"  -I"C:/Dev-Cpp/include/c++/backward"  -I"C:/Dev-Cpp/include" 
+BIN  = Robotron.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS = $(INCS) 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Robotron.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	$(CPP) $(LINKOBJ) -o "Robotron.exe" $(LIBS)
+
+Bitmap.o: Bitmap.cpp
+	$(CPP) -c Bitmap.cpp -o Bitmap.o $(CXXFLAGS)
+
+GameEngine.o: GameEngine.cpp
+	$(CPP) -c GameEngine.cpp -o GameEngine.o $(CXXFLAGS)
+
+Sprite.o: Sprite.cpp
+	$(CPP) -c Sprite.cpp -o Sprite.o $(CXXFLAGS)
+
+Background.o: Background.cpp
+	$(CPP) -c Background.cpp -o Background.o $(CXXFLAGS)
+
+Robotron.o: Robotron.cpp
+	$(CPP) -c Robotron.cpp -o Robotron.o $(CXXFLAGS)
+
+MiscSprite.o: MiscSprite.cpp
+	$(CPP) -c MiscSprite.cpp -o MiscSprite.o $(CXXFLAGS)
+
+Robotron_private.res: Robotron_private.rc Resource.rc 
+	$(WINDRES) -i Robotron_private.rc -I rc -o Robotron_private.res -O coff 

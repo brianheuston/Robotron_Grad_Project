@@ -1,0 +1,35 @@
+//-----------------------------------------------------------------
+// Robotron - The New Age
+// C++ Resource File - Resource.rc
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Include Files
+//-----------------------------------------------------------------
+#include "Resource.h"
+
+//-----------------------------------------------------------------
+// Icons
+//-----------------------------------------------------------------
+IDI_ICON        ICON       "Res\\Robotron.ico"
+IDI_ICON_SM     ICON       "Res\\Robotron_sm.ico"
+
+//-----------------------------------------------------------------
+// Bitmaps
+//-----------------------------------------------------------------
+IDB_SPLASH      BITMAP     "Res\\Splash.bmp"
+IDB_SM_ROBOT    BITMAP     "Res\\Robot_sm.bmp"
+IDB_GAME_OVER   BITMAP     "Res\\Game_over.bmp"
+IDB_EUGENE      BITMAP     "Res\\Eugene.bmp"
+IDB_LASER       BITMAP     "Res\\Laser.bmp"
+IDB_GRUNT       BITMAP     "Res\\Robot_grunt.bmp"
+IDB_HULK        BITMAP     "Res\\Robot_hulk.bmp"
+IDB_ELECTRODE   BITMAP     "Res\\Electrode.bmp"
+IDB_MIKEY       BITMAP     "Res\\Mikey.bmp"
+IDB_SCORE       BITMAP     "Res\\Family_actions.bmp"
+
+//-----------------------------------------------------------------
+// Waves
+//-----------------------------------------------------------------
+IDW_LASER       WAVE       "Res\\Laser.wav"
+IDW_SM_EXPLODE  WAVE       "Res\\SmExplode.wav"
